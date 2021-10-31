@@ -1,12 +1,12 @@
 import cx from 'classnames';
 import React, { forwardRef, HTMLProps } from 'react';
+import { Input as ChakraInput } from "@chakra-ui/react"
 
 type InputProps = HTMLProps<HTMLInputElement>;
 
 const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => (
-  <input
+  <ChakraInput
     {...props}
-    className={cx('rbt-input-main', props.className)}
     ref={ref}
   />
 ));
